@@ -1,2 +1,2 @@
-#!/bin/sh
-python yt_bot.py
+#!/bin/bash
+python3 yt_bot.py
