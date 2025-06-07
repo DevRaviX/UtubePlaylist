@@ -1,1 +1,1 @@
-worker: python yt_bot.py
+web: bash start.sh
