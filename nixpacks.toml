@@ -1,2 +1,2 @@
-[phases.start]
-commands = ["./start.sh"]
+[phases.setup]
+nixPkgs = ["ffmpeg", "python311", "gcc"]
