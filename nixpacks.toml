@@ -1,2 +1,8 @@
 [phases.setup]
 nixPkgs = ["ffmpeg", "python311", "gcc"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.start]
+cmd = "bash start.sh"
