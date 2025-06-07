@@ -120,13 +120,15 @@ async def download_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Build download command
     cmd = ["yt-dlp", "-o", output_template]
+
     if format_choice == "mp3":
         cmd += ["-x", "--audio-format", "mp3"]
     else:
-        cmd += ["-f", yt_format]
+        cmd += ["-f", yt_format, "--merge-output-format", "mp4"]
 
     cmd.append("--yes-playlist")
     cmd.append(url)
+
 
     try:
         subprocess.run(cmd, check=True)
